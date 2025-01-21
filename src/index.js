@@ -3,11 +3,11 @@ import "./style.css";
 const img = document.querySelector("img");
 
 let searchinput = document.getElementById("searchbox");
-
+let request = "";
 let searchbutton = document.getElementById("searchbutton");
 
 fetch(
-	"https://api.giphy.com/v1/gifs/translate?api_key=SPSm69XvEdKnNRD7THW8YTohV73lYnuW&s=cats"
+	`https://api.giphy.com/v1/gifs/translate?api_key=SPSm69XvEdKnNRD7THW8YTohV73lYnuW&s=${request}`
 )
 	.then(function (response) {
 		return response.json();
@@ -18,4 +18,7 @@ fetch(
 	});
 let gif = document.getElementById("dispalygif");
 
-gif.innerHTML = img.url;
+searchbutton.addEventListener("click", () => {
+	request = searchbutton.innerHTML;
+});
+gif === img.url;
