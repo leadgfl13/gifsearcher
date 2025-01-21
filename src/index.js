@@ -1,6 +1,11 @@
 import "./style.css";
 
 const img = document.querySelector("img");
+
+let searchinput = document.getElementById("searchbox");
+
+let searchbutton = document.getElementById("searchbutton");
+
 fetch(
 	"https://api.giphy.com/v1/gifs/translate?api_key=SPSm69XvEdKnNRD7THW8YTohV73lYnuW&s=cats"
 )
@@ -12,4 +17,5 @@ fetch(
 		img.src = response.data.images.original.url;
 	});
 let gif = document.getElementById("dispalygif");
+
 gif.innerHTML = img.url;
