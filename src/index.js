@@ -9,6 +9,7 @@ fetch(
 	})
 	.then(function (response) {
 		console.log(response.data.images.original.url);
+		img.src = response.data.images.original.url;
 	});
 let gif = document.getElementById("dispalygif");
 gif.innerHTML = img.url;
