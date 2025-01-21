@@ -6,6 +6,7 @@ let searchinput = document.getElementById("searchbox");
 let request = "";
 let searchbutton = document.getElementById("searchbutton");
 
+//eed a static image to display at first
 fetch(
 	`https://api.giphy.com/v1/gifs/translate?api_key=SPSm69XvEdKnNRD7THW8YTohV73lYnuW&s=${request}`
 )
@@ -21,4 +22,4 @@ let gif = document.getElementById("dispalygif");
 searchbutton.addEventListener("click", () => {
 	request = searchbutton.innerHTML;
 });
-gif === img.url;
+img === img.url;
