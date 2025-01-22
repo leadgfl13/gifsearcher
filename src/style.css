@@ -14,6 +14,16 @@ body {
 	grid-area: 1/1/2/2;
 }
 
+.title {
+	display: flex;
+	font-size: 36px;
+	text-decoration: underline;
+	font-weight: 700;
+	color: goldenrod;
+	align-items: center;
+	justify-content: left;
+	padding-left: 40px;
+}
 .middle {
 	justify-content: center;
 	align-items: center;
@@ -38,4 +48,16 @@ body {
 img {
 	height: 200px;
 	width: 200px;
+}
+
+.bottom {
+	display: flex;
+	font-size: 22px;
+	text-decoration: underline;
+	font-weight: 700;
+	color: goldenrod;
+	margin-left: 40px;
+	align-items: center;
+	justify-content: right;
+	padding-right: 40px;
 }
