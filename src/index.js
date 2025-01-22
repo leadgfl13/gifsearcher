@@ -3,23 +3,25 @@ import "./style.css";
 const img = document.querySelector("img");
 
 let searchinput = document.getElementById("searchbox");
-let request = "";
-let searchbutton = document.getElementById("searchbutton");
 
-//eed a static image to display at first
-fetch(
-	`https://api.giphy.com/v1/gifs/translate?api_key=SPSm69XvEdKnNRD7THW8YTohV73lYnuW&s=${request}`
-)
-	.then(function (response) {
-		return response.json();
-	})
-	.then(function (response) {
-		console.log(response.data.images.original.url);
-		img.src = response.data.images.original.url;
-	});
-let gif = document.getElementById("dispalygif");
+let searchbutton = document.getElementById("searchbutton");
+let request = "";
 
 searchbutton.addEventListener("click", () => {
-	request = searchbutton.innerHTML;
+	request = searchinput.value;
+	fetch(
+		`https://api.giphy.com/v1/gifs/translate?api_key=SPSm69XvEdKnNRD7THW8YTohV73lYnuW&s=${request}`
+	)
+		.then(function (response) {
+			return response.json();
+		})
+		.then(function (response) {
+			img.src = response.data.images.original.url;
+			img === img.url;
+			searchinput.value = "";
+		});
 });
-img === img.url;
+
+//eed a static image to display at first
+
+let gif = document.getElementById("dispalygif");
